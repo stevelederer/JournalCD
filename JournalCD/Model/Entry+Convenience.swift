@@ -11,9 +11,10 @@ import CoreData
 
 extension Entry {
     
-    // a convenience init MUST call a designated initalizer
+    @discardableResult
     convenience init(title: String, body: String, timeStamp: Date = Date(), context: NSManagedObjectContext = CoreDataStack.context) {
-        
+        // Definition: - a convenience init MUST call a designated initalizer
+
         self.init(context: context)
         
         self.title = title
