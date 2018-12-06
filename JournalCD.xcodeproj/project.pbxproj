@@ -12,6 +12,7 @@
 		1B77B87821B99940008BA8C0 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B77B87721B99940008BA8C0 /* EntryController.swift */; };
 		1B77B87A21B99FFC008BA8C0 /* EntriesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B77B87921B99FFC008BA8C0 /* EntriesListTableViewController.swift */; };
 		1B77B87D21B9A98C008BA8C0 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B77B87C21B9A98C008BA8C0 /* DateExtension.swift */; };
+		1B77B87F21B9C572008BA8C0 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B77B87E21B9C572008BA8C0 /* EntryDetailViewController.swift */; };
 		F723687021B9838A005224A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F723686F21B9838A005224A6 /* AppDelegate.swift */; };
 		F723687521B9838A005224A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F723687321B9838A005224A6 /* Main.storyboard */; };
 		F723687821B9838A005224A6 /* JournalCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F723687621B9838A005224A6 /* JournalCD.xcdatamodeld */; };
@@ -25,6 +26,7 @@
 		1B77B87721B99940008BA8C0 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		1B77B87921B99FFC008BA8C0 /* EntriesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListTableViewController.swift; sourceTree = "<group>"; };
 		1B77B87C21B9A98C008BA8C0 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		1B77B87E21B9C572008BA8C0 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		F723686C21B9838A005224A6 /* JournalCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F723686F21B9838A005224A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F723687421B9838A005224A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				1B77B87921B99FFC008BA8C0 /* EntriesListTableViewController.swift */,
+				1B77B87E21B9C572008BA8C0 /* EntryDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				1B77B87321B99412008BA8C0 /* CoreDataStack.swift in Sources */,
 				1B77B87821B99940008BA8C0 /* EntryController.swift in Sources */,
 				F723687821B9838A005224A6 /* JournalCD.xcdatamodeld in Sources */,
+				1B77B87F21B9C572008BA8C0 /* EntryDetailViewController.swift in Sources */,
 				F723687021B9838A005224A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,7 +331,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JournalCD/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/JournalCD/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,7 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JournalCD/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/JournalCD/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

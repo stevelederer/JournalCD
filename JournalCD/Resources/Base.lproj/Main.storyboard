@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g6d-cG-1HA">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Entries-->
         <scene sceneID="JWc-ua-sMP">
             <objects>
-                <tableViewController id="3RN-9y-WQQ" customClass="EntriesTableViewController" customModule="JournalCD" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3RN-9y-WQQ" customClass="EntriesListTableViewController" customModule="JournalCD" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mpA-Nn-ENU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="i0q-Qz-2EC" kind="show" id="HrX-PU-69N"/>
+                                    <segue destination="i0q-Qz-2EC" kind="show" identifier="ToDetailView" id="HrX-PU-69N"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,7 +52,7 @@
                             <outlet property="delegate" destination="3RN-9y-WQQ" id="f8h-UG-l82"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="8cc-D9-Gac">
+                    <navigationItem key="navigationItem" title="Entries" id="8cc-D9-Gac">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pJ6-Md-zYp">
                             <connections>
                                 <segue destination="i0q-Qz-2EC" kind="show" id="0lp-oH-gpW"/>
@@ -99,8 +99,16 @@
                         <viewLayoutGuide key="safeArea" id="dLX-56-DAd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Cgu-46-4P5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Zx9-TV-EyD"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Zx9-TV-EyD">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="i0q-Qz-2EC" id="zOr-pC-yEO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextView" destination="Lbn-dm-mKf" id="tPf-Yd-bmk"/>
+                        <outlet property="titleTextField" destination="pVX-vh-dCZ" id="WSv-qb-ddB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAN-Xe-zix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,6 +132,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0lp-oH-gpW"/>
+        <segue reference="HrX-PU-69N"/>
     </inferredMetricsTieBreakers>
 </document>

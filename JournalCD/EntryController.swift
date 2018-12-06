@@ -17,7 +17,7 @@ class EntryController {
     
     // MARK: - CRUD Functions
     func addEntryWith(title: String, body: String) {
-        Entry(title: title, body: body)
+        let _ = Entry(title: title, body: body)
         saveToPersistentStore()
     }
     func update(entry: Entry, newTitle: String, newBody: String) {
